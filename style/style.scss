@@ -3,3 +3,62 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    background: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+
+    p, li{
+        color: white;
+    }
+    
+    
+    .degree-container{
+        display: flex;
+        margin-bottom: 10px;
+    
+        #degree{
+            font-size: 60px;
+        }
+    
+        #symbol{
+            font-size: 30px;
+        }
+    }
+
+
+    #city{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    input{
+        padding: 5px;
+    }
+
+    button{
+        padding: 5px;
+    }
+
+    form{
+        margin-bottom: 20px;
+    }
+
+    ul{
+        width: 90%;
+
+        li{
+            border: 1px solid white;
+            list-style: none;
+            padding: 5px;        
+        }
+    }
+}
+
+
