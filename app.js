@@ -1,4 +1,5 @@
 const inputValue = document.getElementById("city-input");
+const img = document.getElementById("weather-img");
 
 cityBtn.addEventListener("click", getWeatherData);
 
@@ -13,6 +14,21 @@ async function getWeatherData(e) {
       let data = await weather.getWeather(coordinates);
       ui.insertData(data);
       console.log(data);
+
+      switch (data.weather[0].description) {
+        case "broken clouds":
+          img.src = "/image/clouds.jpg";
+          break;
+        case "overcast clouds":
+          img.src = "/image/clouds.jpg";
+          break;
+        case "clear sky":
+          img.src = "/image/sun.jpg";
+          break;
+        case "moderate rain":
+          img.src = "/image/rain gif.gif";
+          break;
+      }
     } catch (error) {
       console.log(error);
     }

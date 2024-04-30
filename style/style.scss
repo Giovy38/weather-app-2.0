@@ -1,11 +1,17 @@
+@import './media-queries';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    background: black;
+}
+
 .container {
-    background: blue;
+    background: rgb(79, 79, 229);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,30 +19,90 @@
     flex-direction: column;
     width: 80%;
     margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 5px 5px 10px 2px rgb(250, 250, 250);
+    max-height: 90vh;
 
     p, li{
         color: white;
     }
 
+    li{
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    input{
+        border-radius:20px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    #input-form{
+        @include intermediate{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    button{
+        border-radius: 5px;
+        background: rgb(1, 144, 184) ;
+        color: white;
+        padding: 5px;
+
+    }
+
+    #weather-img{
+        margin-bottom: 30px;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow:  5px 5px 10px 2px #101010;
+
+        @include intermediate{
+            max-width: 60vw;
+        }
+    }
+
     #lat-lon-check{
-        background: yellow ;
+        background: rgb(1, 144, 184) ;
         display: flex;
         gap: 10px;
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
+        box-shadow:  5px 5px 10px 2px #101010;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 30px;
     }
+
+   
 
     #lat-input{
         display: none;
+        box-shadow: 2.5px 2.5px 5px 1px #101010;
+
     }
 
     #lon-input{
         display: none;
+        box-shadow: 2.5px 2.5px 5px 1px #101010;
+
     }
 
     #lat-lon-btn{
         display: none;
+    }
+
+    #city-input{
+        box-shadow: 2.5px 2.5px 5px 1px #101010;
     }
     
     
@@ -65,6 +131,7 @@
 
     button{
         padding: 5px;
+        cursor: pointer;
     }
 
     form{
@@ -72,12 +139,17 @@
     }
 
     ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         width: 90%;
 
         li{
             border: 1px solid white;
             list-style: none;
-            padding: 5px;        
+            padding: 5px;   
+            box-shadow: 2.5px 2.5px 5px 1px #101010;
+            border: none;
         }
     }
 }
