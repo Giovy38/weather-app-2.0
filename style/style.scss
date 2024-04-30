@@ -17,6 +17,27 @@
     p, li{
         color: white;
     }
+
+    #lat-lon-check{
+        background: yellow ;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #lat-input{
+        display: none;
+    }
+
+    #lon-input{
+        display: none;
+    }
+
+    #lat-lon-btn{
+        display: none;
+    }
     
     
     .degree-container{

@@ -17,6 +17,23 @@
 .container p, .container li {
   color: white;
 }
+.container #lat-lon-check {
+  background: yellow;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container #lat-input {
+  display: none;
+}
+.container #lon-input {
+  display: none;
+}
+.container #lat-lon-btn {
+  display: none;
+}
 .container .degree-container {
   display: flex;
   margin-bottom: 10px;

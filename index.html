@@ -9,18 +9,29 @@
   <body>
     <div class="container">
       <form>
+        <label id="lat-lon-check"
+          ><input id="check-value" type="checkbox" />Ricerca per latitudine e
+          longitudine</label
+        >
+      </form>
+
+      <form>
         <input id="city-input" type="text" placeholder="Cerca una città" />
         <button id="city-btn">Cerca</button>
+
+        <input type="text" id="lat-input" placeholder="inserisci latitudine" />
+        <input type="text" id="lon-input" placeholder="inserisci longitudine" />
+        <button id="lat-lon-btn">Cerca</button>
       </form>
 
       <div class="degree-container">
-        <p id="degree">20</p>
+        <p id="degree">0</p>
         <p id="symbol">o</p>
       </div>
 
       <p id="city">Città</p>
 
-      <img class="icon" src="" alt="icon" />
+      <img id="weather-img" class="icon" src="" alt="icon" />
 
       <ul>
         <li id="umidity">Umidità</li>
@@ -31,6 +42,7 @@
     </div>
 
     <script src="/interface.js"></script>
+    <script src="/latAndLonCheck.js"></script>
     <script src="/weather.js"></script>
     <script src="/app.js"></script>
   </body>
