@@ -15,14 +15,7 @@ async function getWeatherData(e) {
       ui.insertData(data);
       console.log(data);
 
-      city.style.fontSize = "40px";
-      city.style.background = "none";
-      city.style.boxShadow = "none";
-      city.style.borderRadius = "0";
-      city.style.textAlign = "center";
-      city.style.color = "white";
-      city.style.padding = "0";
-      city.style.marginBottom = "10px";
+      city.classList.remove("city-error");
 
       switch (data.weather[0].description) {
         case "broken clouds":
@@ -41,26 +34,11 @@ async function getWeatherData(e) {
     } catch (error) {
       city.textContent =
         "Errore nella ricerca della città, assicurati di aver inserito una città esistente";
-
-      city.style.fontSize = "30px";
-      city.style.background = "white";
-      city.style.boxShadow = "5px 5px 10px 2px #101010";
-      city.style.borderRadius = "10px";
-      city.style.textAlign = "center";
-      city.style.color = "red";
-      city.style.padding = "5px";
-      city.style.marginBottom = "20px";
+      city.className = "city-error";
     }
   } else {
     city.textContent = "devi inserire una città";
-    city.style.fontSize = "30px";
-    city.style.background = "white";
-    city.style.boxShadow = "5px 5px 10px 2px #101010";
-    city.style.borderRadius = "10px";
-    city.style.textAlign = "center";
-    city.style.color = "red";
-    city.style.padding = "5px";
-    city.style.marginBottom = "20px";
+    city.className = "city-error";
   }
 }
 
@@ -79,14 +57,7 @@ async function getWeatherLonLat(e) {
       ui.insertData(data);
       console.log(data);
 
-      city.style.fontSize = "40px";
-      city.style.background = "none";
-      city.style.boxShadow = "none";
-      city.style.borderRadius = "0";
-      city.style.textAlign = "center";
-      city.style.color = "white";
-      city.style.padding = "0";
-      city.style.marginBottom = "10px";
+      city.classList.remove("city-error");
 
       switch (data.weather[0].description) {
         case "broken clouds":
@@ -105,24 +76,10 @@ async function getWeatherLonLat(e) {
     } catch (error) {
       city.textContent =
         "Errore nella ricerca della città, assicurati di aver inserito le coordinate corrette";
-      city.style.fontSize = "30px";
-      city.style.background = "white";
-      city.style.boxShadow = "5px 5px 10px 2px #101010";
-      city.style.borderRadius = "10px";
-      city.style.textAlign = "center";
-      city.style.color = "red";
-      city.style.padding = "5px";
-      city.style.marginBottom = "20px";
+      city.className = "city-error";
     }
   } else {
     city.textContent = "devi inserire delle coordinate";
-    city.style.fontSize = "30px";
-    city.style.background = "white";
-    city.style.boxShadow = "5px 5px 10px 2px #101010";
-    city.style.borderRadius = "10px";
-    city.style.textAlign = "center";
-    city.style.color = "red";
-    city.style.padding = "5px";
-    city.style.marginBottom = "20px";
+    city.className = "city-error";
   }
 }

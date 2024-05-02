@@ -122,7 +122,17 @@ body{
 
     #city{
         font-size: 40px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .city-error{
+        font-size: 30px;
+        background: white;
+        box-shadow: 5px 5px 10px 2px #101010;
+        border-radius: 10px;
+        text-align: center;
+        color: red;
+        padding: 5px;
     }
 
     input{
