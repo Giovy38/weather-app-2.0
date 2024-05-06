@@ -30,6 +30,9 @@ async function getWeatherData(e) {
         case "moderate rain":
           img.src = "/image/rain gif.gif";
           break;
+        case "light rain":
+          img.src = "/image/rain.jpg";
+          break;
       }
     } catch (error) {
       city.textContent =
@@ -71,6 +74,9 @@ async function getWeatherLonLat(e) {
           break;
         case "moderate rain":
           img.src = "/image/rain gif.gif";
+          break;
+        case "light rain":
+          img.src = "/image/rain.jpg";
           break;
       }
     } catch (error) {
